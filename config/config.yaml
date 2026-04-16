@@ -1,0 +1,24 @@
+mqtt:
+  broker: "localhost"
+  port: 1883
+  topic: "fridge/sensor"
+  client_id: "cold_chain_processor"
+
+influxdb:
+  url: "http://localhost:8086"
+  token: "VbRp2daHeBrwC_Z2h3F0W47du59WRCyByQue34L54SSF1lEMdfuT2GAt_TCfpNUuaVDO3gd5_JsHV-WHTIAvqw=="
+  org: "iot_project"
+  bucket: "cold_chain"
+
+thresholds:
+  temp_min: -10.0
+  temp_max: 60.0
+  temp_alert_low: 2.0
+  temp_alert_high: 8.0
+  humidity_min: 0.0
+  humidity_max: 100.0
+
+device:
+  id: "fridge_01"
+  location: "pharmacy_storage"
+  read_interval_seconds: 10
